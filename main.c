@@ -40,11 +40,11 @@ void histogram(float* data, int data_count, float min_meas, float max_meas, int 
     int thread_count = omp_get_num_threads();
 
     int bin, low_boundary, high_boundary;
+    float bin_width = (max_meas - min_meas) / bin_count;
+
     float bin_maxes[bin_count];
 
     int local_bin_counts[bin_count];
-
-    float bin_width = (max_meas - min_meas) / bin_count;
 
     low_boundary = (data_count / thread_count) * my_rank;
     high_boundary = (data_count / thread_count) * (my_rank + 1);

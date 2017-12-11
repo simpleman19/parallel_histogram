@@ -1,1 +1,3 @@
-# parallel_histogram
+# Chance Turner
+# Parallel Histogram
+# Linux (Arch)
